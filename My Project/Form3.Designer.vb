@@ -22,9 +22,114 @@ Partial Class Form3
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Text = "Form3"
+        Panel2 = New Panel()
+        lblError = New Label()
+        Label3 = New Label()
+        btnLogin = New Button()
+        Label2 = New Label()
+        txtPassword = New TextBox()
+        Label1 = New Label()
+        txtUsername = New TextBox()
+        Panel2.SuspendLayout()
+        SuspendLayout()
+        ' 
+        ' Panel2
+        ' 
+        Panel2.BackgroundImageLayout = ImageLayout.None
+        Panel2.Controls.Add(lblError)
+        Panel2.Controls.Add(Label3)
+        Panel2.Controls.Add(btnLogin)
+        Panel2.Controls.Add(Label2)
+        Panel2.Controls.Add(txtPassword)
+        Panel2.Controls.Add(Label1)
+        Panel2.Controls.Add(txtUsername)
+        Panel2.Location = New Point(165, 128)
+        Panel2.Name = "Panel2"
+        Panel2.Size = New Size(429, 320)
+        Panel2.TabIndex = 2
+        ' 
+        ' lblError
+        ' 
+        lblError.AutoSize = True
+        lblError.Location = New Point(140, 230)
+        lblError.Name = "lblError"
+        lblError.Size = New Size(103, 20)
+        lblError.TabIndex = 6
+        lblError.Text = "error message"
+        lblError.Visible = False
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.Font = New Font("Segoe UI", 17F)
+        Label3.Location = New Point(117, 17)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(205, 40)
+        Label3.TabIndex = 5
+        Label3.Text = "ADMIN LOGIN"
+        ' 
+        ' btnLogin
+        ' 
+        btnLogin.Font = New Font("Segoe UI", 13F)
+        btnLogin.Location = New Point(140, 253)
+        btnLogin.Name = "btnLogin"
+        btnLogin.Size = New Size(143, 51)
+        btnLogin.TabIndex = 4
+        btnLogin.Text = "Enter"
+        btnLogin.UseVisualStyleBackColor = True
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.Location = New Point(58, 146)
+        Label2.Name = "Label2"
+        Label2.Size = New Size(72, 20)
+        Label2.TabIndex = 3
+        Label2.Text = "password"
+        ' 
+        ' txtPassword
+        ' 
+        txtPassword.Font = New Font("Segoe UI", 15F)
+        txtPassword.Location = New Point(58, 169)
+        txtPassword.Name = "txtPassword"
+        txtPassword.Size = New Size(318, 41)
+        txtPassword.TabIndex = 2
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Location = New Point(58, 71)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(73, 20)
+        Label1.TabIndex = 1
+        Label1.Text = "username"
+        ' 
+        ' txtUsername
+        ' 
+        txtUsername.Font = New Font("Segoe UI", 15F)
+        txtUsername.Location = New Point(58, 94)
+        txtUsername.Name = "txtUsername"
+        txtUsername.Size = New Size(318, 41)
+        txtUsername.TabIndex = 0
+        ' 
+        ' Form3
+        ' 
+        AutoScaleDimensions = New SizeF(8F, 20F)
+        AutoScaleMode = AutoScaleMode.Font
+        ClientSize = New Size(788, 547)
+        Controls.Add(Panel2)
+        Name = "Form3"
+        Text = "Form3"
+        Panel2.ResumeLayout(False)
+        Panel2.PerformLayout()
+        ResumeLayout(False)
     End Sub
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents Label1 As Label
+    Friend WithEvents txtUsername As TextBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents btnLogin As Button
+    Friend WithEvents Label2 As Label
+    Friend WithEvents txtPassword As TextBox
+    Friend WithEvents lblError As Label
 End Class

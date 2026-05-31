@@ -22,57 +22,94 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Label1 = New Label()
-        Button1 = New Button()
-        Button2 = New Button()
+        btnGiveFeedback = New Button()
+        btnAdminLogin = New Button()
+        GroupBox1 = New GroupBox()
+        PictureBox1 = New PictureBox()
+        title = New Label()
+        GroupBox1.SuspendLayout()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
-        ' Label1
+        ' btnGiveFeedback
         ' 
-        Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI", 35F)
-        Label1.Location = New Point(43, 25)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(698, 78)
-        Label1.TabIndex = 0
-        Label1.Text = "Student Feedback System"
+        btnGiveFeedback.BackColor = SystemColors.ControlLight
+        btnGiveFeedback.Font = New Font("Segoe UI", 20F)
+        btnGiveFeedback.ForeColor = SystemColors.ActiveCaptionText
+        btnGiveFeedback.Location = New Point(34, 35)
+        btnGiveFeedback.Name = "btnGiveFeedback"
+        btnGiveFeedback.Size = New Size(382, 82)
+        btnGiveFeedback.TabIndex = 1
+        btnGiveFeedback.Text = "FEEDBACK"
+        btnGiveFeedback.UseVisualStyleBackColor = False
         ' 
-        ' Button1
+        ' btnAdminLogin
         ' 
-        Button1.Font = New Font("Segoe UI", 20F)
-        Button1.Location = New Point(181, 175)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(418, 103)
-        Button1.TabIndex = 1
-        Button1.Text = "Give Feedback"
-        Button1.UseVisualStyleBackColor = True
+        btnAdminLogin.BackColor = SystemColors.ControlLight
+        btnAdminLogin.Font = New Font("Segoe UI", 20F)
+        btnAdminLogin.ForeColor = SystemColors.ActiveCaptionText
+        btnAdminLogin.Location = New Point(34, 153)
+        btnAdminLogin.Name = "btnAdminLogin"
+        btnAdminLogin.Size = New Size(382, 82)
+        btnAdminLogin.TabIndex = 2
+        btnAdminLogin.Text = "ADMIN "
+        btnAdminLogin.UseVisualStyleBackColor = False
         ' 
-        ' Button2
+        ' GroupBox1
         ' 
-        Button2.Font = New Font("Segoe UI", 20F)
-        Button2.Location = New Point(181, 338)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(418, 103)
-        Button2.TabIndex = 2
-        Button2.Text = "Admin Login"
-        Button2.UseVisualStyleBackColor = True
+        GroupBox1.BackColor = SystemColors.MenuBar
+        GroupBox1.Controls.Add(btnGiveFeedback)
+        GroupBox1.Controls.Add(btnAdminLogin)
+        GroupBox1.FlatStyle = FlatStyle.Flat
+        GroupBox1.ForeColor = SystemColors.ActiveBorder
+        GroupBox1.Location = New Point(164, 203)
+        GroupBox1.Margin = New Padding(10)
+        GroupBox1.Name = "GroupBox1"
+        GroupBox1.Size = New Size(457, 282)
+        GroupBox1.TabIndex = 4
+        GroupBox1.TabStop = False
+        ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.BackgroundImageLayout = ImageLayout.None
+        PictureBox1.Image = My.Resources.Resources.tugn_smol
+        PictureBox1.Location = New Point(261, -59)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(125, 348)
+        PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBox1.TabIndex = 5
+        PictureBox1.TabStop = False
+        ' 
+        ' title
+        ' 
+        title.AutoSize = True
+        title.Font = New Font("FSP DEMO - Greycliff CF", 28.1999989F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
+        title.Location = New Point(383, 69)
+        title.Name = "title"
+        title.Size = New Size(156, 69)
+        title.TabIndex = 6
+        title.Text = "TUGN"
         ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
+        BackColor = Color.WhiteSmoke
         ClientSize = New Size(788, 547)
-        Controls.Add(Button2)
-        Controls.Add(Button1)
-        Controls.Add(Label1)
+        Controls.Add(GroupBox1)
+        Controls.Add(title)
+        Controls.Add(PictureBox1)
         Name = "Form1"
         Text = "Form1"
+        GroupBox1.ResumeLayout(False)
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
-
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btnGiveFeedback As Button
+    Friend WithEvents btnAdminLogin As Button
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents title As Label
 
 End Class

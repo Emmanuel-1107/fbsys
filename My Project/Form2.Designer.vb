@@ -22,44 +22,46 @@ Partial Class Form2
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        TextBox1 = New TextBox()
+        txtUsername = New TextBox()
         Label1 = New Label()
         Label2 = New Label()
-        ComboBox1 = New ComboBox()
+        CmbSubject = New ComboBox()
         Label3 = New Label()
-        ComboBox2 = New ComboBox()
+        cmbInstructor = New ComboBox()
         Label4 = New Label()
-        ComboBox3 = New ComboBox()
+        cmbSemester = New ComboBox()
         Label5 = New Label()
         RadioButton2 = New RadioButton()
         RadioButton1 = New RadioButton()
         RadioButton3 = New RadioButton()
         RadioButton4 = New RadioButton()
         RadioButton5 = New RadioButton()
-        TextBox2 = New TextBox()
+        txtComments = New TextBox()
         Label8 = New Label()
-        GroupBox1 = New GroupBox()
+        grpInstructorRating = New GroupBox()
         RadioButton9 = New RadioButton()
         RadioButton10 = New RadioButton()
         RadioButton6 = New RadioButton()
         RadioButton8 = New RadioButton()
         RadioButton7 = New RadioButton()
-        GroupBox2 = New GroupBox()
-        Label6 = New Label()
-        Button1 = New Button()
+        grpSubjectRating = New GroupBox()
+        lblCharCount = New Label()
+        btnSubmit = New Button()
         Label9 = New Label()
-        Button2 = New Button()
-        GroupBox1.SuspendLayout()
+        btnBack = New Button()
+        PictureBox1 = New PictureBox()
+        grpInstructorRating.SuspendLayout()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
-        ' TextBox1
+        ' txtUsername
         ' 
-        TextBox1.Font = New Font("Segoe UI", 15F)
-        TextBox1.Location = New Point(12, 102)
-        TextBox1.Name = "TextBox1"
-        TextBox1.PlaceholderText = "Text here.."
-        TextBox1.Size = New Size(300, 41)
-        TextBox1.TabIndex = 0
+        txtUsername.Font = New Font("Segoe UI", 15F)
+        txtUsername.Location = New Point(12, 102)
+        txtUsername.Name = "txtUsername"
+        txtUsername.PlaceholderText = "Text here.."
+        txtUsername.Size = New Size(300, 41)
+        txtUsername.TabIndex = 0
         ' 
         ' Label1
         ' 
@@ -75,21 +77,21 @@ Partial Class Form2
         ' 
         Label2.AutoSize = True
         Label2.Font = New Font("Segoe UI Semibold", 20F, FontStyle.Bold)
-        Label2.Location = New Point(12, 22)
+        Label2.Location = New Point(73, 23)
         Label2.Name = "Label2"
-        Label2.Size = New Size(476, 46)
+        Label2.Size = New Size(113, 46)
         Label2.TabIndex = 2
-        Label2.Text = "STUDENT FEEDBACK SYSTEM"
+        Label2.Text = "TUGN"
         ' 
-        ' ComboBox1
+        ' CmbSubject
         ' 
-        ComboBox1.Font = New Font("Segoe UI", 12F)
-        ComboBox1.FormattingEnabled = True
-        ComboBox1.Items.AddRange(New Object() {"IPROGLAB", "IPROGLEC", "DISSTRU"})
-        ComboBox1.Location = New Point(12, 182)
-        ComboBox1.Name = "ComboBox1"
-        ComboBox1.Size = New Size(300, 36)
-        ComboBox1.TabIndex = 3
+        CmbSubject.Font = New Font("Segoe UI", 12F)
+        CmbSubject.FormattingEnabled = True
+        CmbSubject.Items.AddRange(New Object() {"IPROGLAB", "IPROGLEC", "DISSTRU"})
+        CmbSubject.Location = New Point(12, 182)
+        CmbSubject.Name = "CmbSubject"
+        CmbSubject.Size = New Size(300, 36)
+        CmbSubject.TabIndex = 3
         ' 
         ' Label3
         ' 
@@ -100,15 +102,15 @@ Partial Class Form2
         Label3.TabIndex = 4
         Label3.Text = "Subject"
         ' 
-        ' ComboBox2
+        ' cmbInstructor
         ' 
-        ComboBox2.Font = New Font("Segoe UI", 12F)
-        ComboBox2.FormattingEnabled = True
-        ComboBox2.Items.AddRange(New Object() {"Mr. Jovel Advincula", "Mrs. Sheila Marie Matias", "Mr. Al Santiago"})
-        ComboBox2.Location = New Point(12, 254)
-        ComboBox2.Name = "ComboBox2"
-        ComboBox2.Size = New Size(300, 36)
-        ComboBox2.TabIndex = 5
+        cmbInstructor.Font = New Font("Segoe UI", 12F)
+        cmbInstructor.FormattingEnabled = True
+        cmbInstructor.Items.AddRange(New Object() {"Mr. Jovel Advincula", "Mrs. Sheila Marie Matias", "Mr. Al Santiago"})
+        cmbInstructor.Location = New Point(12, 254)
+        cmbInstructor.Name = "cmbInstructor"
+        cmbInstructor.Size = New Size(300, 36)
+        cmbInstructor.TabIndex = 5
         ' 
         ' Label4
         ' 
@@ -119,15 +121,15 @@ Partial Class Form2
         Label4.TabIndex = 6
         Label4.Text = "Instructor"
         ' 
-        ' ComboBox3
+        ' cmbSemester
         ' 
-        ComboBox3.Font = New Font("Segoe UI", 12F)
-        ComboBox3.FormattingEnabled = True
-        ComboBox3.Items.AddRange(New Object() {"1", "2"})
-        ComboBox3.Location = New Point(12, 325)
-        ComboBox3.Name = "ComboBox3"
-        ComboBox3.Size = New Size(300, 36)
-        ComboBox3.TabIndex = 7
+        cmbSemester.Font = New Font("Segoe UI", 12F)
+        cmbSemester.FormattingEnabled = True
+        cmbSemester.Items.AddRange(New Object() {"1", "2"})
+        cmbSemester.Location = New Point(12, 325)
+        cmbSemester.Name = "cmbSemester"
+        cmbSemester.Size = New Size(300, 36)
+        cmbSemester.TabIndex = 7
         ' 
         ' Label5
         ' 
@@ -189,16 +191,16 @@ Partial Class Form2
         RadioButton5.Text = "5"
         RadioButton5.UseVisualStyleBackColor = True
         ' 
-        ' TextBox2
+        ' txtComments
         ' 
-        TextBox2.Font = New Font("Segoe UI", 15F)
-        TextBox2.Location = New Point(12, 394)
-        TextBox2.MaxLength = 2000
-        TextBox2.Multiline = True
-        TextBox2.Name = "TextBox2"
-        TextBox2.PlaceholderText = "Text here.."
-        TextBox2.Size = New Size(300, 43)
-        TextBox2.TabIndex = 21
+        txtComments.Font = New Font("Segoe UI", 15F)
+        txtComments.Location = New Point(12, 394)
+        txtComments.MaxLength = 2000
+        txtComments.Multiline = True
+        txtComments.Name = "txtComments"
+        txtComments.PlaceholderText = "Text here.."
+        txtComments.Size = New Size(300, 43)
+        txtComments.TabIndex = 21
         ' 
         ' Label8
         ' 
@@ -209,22 +211,23 @@ Partial Class Form2
         Label8.TabIndex = 22
         Label8.Text = "Comment (OPTIONAL)"
         ' 
-        ' GroupBox1
+        ' grpInstructorRating
         ' 
-        GroupBox1.Controls.Add(RadioButton9)
-        GroupBox1.Controls.Add(RadioButton10)
-        GroupBox1.Controls.Add(RadioButton6)
-        GroupBox1.Controls.Add(RadioButton8)
-        GroupBox1.Controls.Add(RadioButton7)
-        GroupBox1.Location = New Point(318, 237)
-        GroupBox1.Name = "GroupBox1"
-        GroupBox1.Size = New Size(210, 53)
-        GroupBox1.TabIndex = 23
-        GroupBox1.TabStop = False
-        GroupBox1.Text = "Rate Instructor"
+        grpInstructorRating.Controls.Add(RadioButton9)
+        grpInstructorRating.Controls.Add(RadioButton10)
+        grpInstructorRating.Controls.Add(RadioButton6)
+        grpInstructorRating.Controls.Add(RadioButton8)
+        grpInstructorRating.Controls.Add(RadioButton7)
+        grpInstructorRating.Location = New Point(318, 237)
+        grpInstructorRating.Name = "grpInstructorRating"
+        grpInstructorRating.Size = New Size(210, 53)
+        grpInstructorRating.TabIndex = 23
+        grpInstructorRating.TabStop = False
+        grpInstructorRating.Text = "Rate Instructor"
         ' 
         ' RadioButton9
         ' 
+        RadioButton9.AccessibleName = "instructorRating"
         RadioButton9.AutoSize = True
         RadioButton9.Location = New Point(124, 23)
         RadioButton9.Name = "RadioButton9"
@@ -235,6 +238,7 @@ Partial Class Form2
         ' 
         ' RadioButton10
         ' 
+        RadioButton10.AccessibleName = "instructorRating"
         RadioButton10.AutoSize = True
         RadioButton10.Location = New Point(164, 23)
         RadioButton10.Name = "RadioButton10"
@@ -245,6 +249,7 @@ Partial Class Form2
         ' 
         ' RadioButton6
         ' 
+        RadioButton6.AccessibleName = "instructorRating"
         RadioButton6.AutoSize = True
         RadioButton6.Location = New Point(7, 23)
         RadioButton6.Name = "RadioButton6"
@@ -255,6 +260,7 @@ Partial Class Form2
         ' 
         ' RadioButton8
         ' 
+        RadioButton8.AccessibleName = "instructorRating"
         RadioButton8.AutoSize = True
         RadioButton8.Location = New Point(86, 23)
         RadioButton8.Name = "RadioButton8"
@@ -265,6 +271,7 @@ Partial Class Form2
         ' 
         ' RadioButton7
         ' 
+        RadioButton7.AccessibleName = "instructorRating"
         RadioButton7.AutoSize = True
         RadioButton7.Location = New Point(45, 23)
         RadioButton7.Name = "RadioButton7"
@@ -273,34 +280,34 @@ Partial Class Form2
         RadioButton7.Text = "2"
         RadioButton7.UseVisualStyleBackColor = True
         ' 
-        ' GroupBox2
+        ' grpSubjectRating
         ' 
-        GroupBox2.Location = New Point(318, 159)
-        GroupBox2.Name = "GroupBox2"
-        GroupBox2.Size = New Size(210, 59)
-        GroupBox2.TabIndex = 24
-        GroupBox2.TabStop = False
-        GroupBox2.Text = "Rate Subject"
+        grpSubjectRating.Location = New Point(318, 159)
+        grpSubjectRating.Name = "grpSubjectRating"
+        grpSubjectRating.Size = New Size(210, 59)
+        grpSubjectRating.TabIndex = 24
+        grpSubjectRating.TabStop = False
+        grpSubjectRating.Text = "Rate Subject"
         ' 
-        ' Label6
+        ' lblCharCount
         ' 
-        Label6.AutoSize = True
-        Label6.Font = New Font("Segoe UI", 7F)
-        Label6.Location = New Point(12, 440)
-        Label6.Name = "Label6"
-        Label6.Size = New Size(145, 15)
-        Label6.TabIndex = 25
-        Label6.Text = "Character Counter: 0/2000"
+        lblCharCount.AutoSize = True
+        lblCharCount.Font = New Font("Segoe UI", 7F)
+        lblCharCount.Location = New Point(12, 440)
+        lblCharCount.Name = "lblCharCount"
+        lblCharCount.Size = New Size(145, 15)
+        lblCharCount.TabIndex = 25
+        lblCharCount.Text = "Character Counter: 0/2000"
         ' 
-        ' Button1
+        ' btnSubmit
         ' 
-        Button1.Font = New Font("Segoe UI", 13F)
-        Button1.Location = New Point(23, 472)
-        Button1.Name = "Button1"
-        Button1.Size = New Size(134, 53)
-        Button1.TabIndex = 26
-        Button1.Text = "Submit"
-        Button1.UseVisualStyleBackColor = True
+        btnSubmit.Font = New Font("Segoe UI", 13F)
+        btnSubmit.Location = New Point(23, 472)
+        btnSubmit.Name = "btnSubmit"
+        btnSubmit.Size = New Size(134, 53)
+        btnSubmit.TabIndex = 26
+        btnSubmit.Text = "Submit"
+        btnSubmit.UseVisualStyleBackColor = True
         ' 
         ' Label9
         ' 
@@ -312,76 +319,89 @@ Partial Class Form2
         Label9.TabIndex = 28
         Label9.Text = "Rate the Instructor based on their overall " & vbCrLf & "performance such as effectiveness, " & vbCrLf & "fairness, attitude, uses of materials " & vbCrLf & "and knowledge." & vbCrLf & vbCrLf & vbCrLf
         ' 
-        ' Button2
+        ' btnBack
         ' 
-        Button2.Font = New Font("Segoe UI", 13F)
-        Button2.Location = New Point(623, 472)
-        Button2.Name = "Button2"
-        Button2.Size = New Size(134, 53)
-        Button2.TabIndex = 29
-        Button2.Text = "Return"
-        Button2.UseVisualStyleBackColor = True
+        btnBack.Font = New Font("Segoe UI", 13F)
+        btnBack.Location = New Point(623, 472)
+        btnBack.Name = "btnBack"
+        btnBack.Size = New Size(134, 53)
+        btnBack.TabIndex = 29
+        btnBack.Text = "Return"
+        btnBack.UseVisualStyleBackColor = True
+        ' 
+        ' PictureBox1
+        ' 
+        PictureBox1.Image = My.Resources.Resources.tugn1
+        PictureBox1.Location = New Point(-5, -18)
+        PictureBox1.Name = "PictureBox1"
+        PictureBox1.Size = New Size(100, 130)
+        PictureBox1.SizeMode = PictureBoxSizeMode.Zoom
+        PictureBox1.TabIndex = 30
+        PictureBox1.TabStop = False
         ' 
         ' Form2
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(789, 549)
-        Controls.Add(Button2)
+        Controls.Add(btnBack)
         Controls.Add(Label9)
-        Controls.Add(Button1)
-        Controls.Add(Label6)
+        Controls.Add(btnSubmit)
+        Controls.Add(lblCharCount)
         Controls.Add(Label8)
-        Controls.Add(TextBox2)
+        Controls.Add(txtComments)
         Controls.Add(RadioButton5)
         Controls.Add(RadioButton4)
         Controls.Add(RadioButton3)
         Controls.Add(RadioButton1)
         Controls.Add(RadioButton2)
         Controls.Add(Label5)
-        Controls.Add(ComboBox3)
+        Controls.Add(cmbSemester)
         Controls.Add(Label4)
-        Controls.Add(ComboBox2)
+        Controls.Add(cmbInstructor)
         Controls.Add(Label3)
-        Controls.Add(ComboBox1)
-        Controls.Add(Label2)
+        Controls.Add(CmbSubject)
         Controls.Add(Label1)
-        Controls.Add(TextBox1)
-        Controls.Add(GroupBox1)
-        Controls.Add(GroupBox2)
+        Controls.Add(txtUsername)
+        Controls.Add(grpInstructorRating)
+        Controls.Add(grpSubjectRating)
+        Controls.Add(Label2)
+        Controls.Add(PictureBox1)
         Name = "Form2"
         Text = "Form2"
-        GroupBox1.ResumeLayout(False)
-        GroupBox1.PerformLayout()
+        grpInstructorRating.ResumeLayout(False)
+        grpInstructorRating.PerformLayout()
+        CType(PictureBox1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
 
-    Private WithEvents TextBox1 As TextBox
+    Private WithEvents txtUsername As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents CmbSubject As ComboBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents cmbInstructor As ComboBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents ComboBox3 As ComboBox
+    Friend WithEvents cmbSemester As ComboBox
     Friend WithEvents Label5 As Label
     Friend WithEvents RadioButton2 As RadioButton
     Friend WithEvents RadioButton1 As RadioButton
     Friend WithEvents RadioButton3 As RadioButton
     Friend WithEvents RadioButton4 As RadioButton
     Friend WithEvents RadioButton5 As RadioButton
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txtComments As TextBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents grpInstructorRating As GroupBox
     Friend WithEvents RadioButton9 As RadioButton
     Friend WithEvents RadioButton10 As RadioButton
     Friend WithEvents RadioButton6 As RadioButton
     Friend WithEvents RadioButton8 As RadioButton
     Friend WithEvents RadioButton7 As RadioButton
-    Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents Label6 As Label
-    Friend WithEvents Button1 As Button
+    Friend WithEvents grpSubjectRating As GroupBox
+    Friend WithEvents lblCharCount As Label
+    Friend WithEvents btnSubmit As Button
     Friend WithEvents Label9 As Label
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btnBack As Button
+    Friend WithEvents PictureBox1 As PictureBox
 End Class
