@@ -22,6 +22,7 @@ Partial Class Form2
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form2))
         txtUsername = New TextBox()
         Label1 = New Label()
         Label2 = New Label()
@@ -50,6 +51,8 @@ Partial Class Form2
         Label9 = New Label()
         btnBack = New Button()
         PictureBox1 = New PictureBox()
+        Label6 = New Label()
+        Label7 = New Label()
         grpInstructorRating.SuspendLayout()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -87,7 +90,7 @@ Partial Class Form2
         ' 
         CmbSubject.Font = New Font("Segoe UI", 12F)
         CmbSubject.FormattingEnabled = True
-        CmbSubject.Items.AddRange(New Object() {"IPROGLAB", "IPROGLEC", "DISSTRU"})
+        CmbSubject.Items.AddRange(New Object() {"IPROGLAB", "IPROGLEC", "DISSTRU1", "DBMGTLAB", "DBMGTLEC", "GEFILDIS", "GEPEFITE", "REMMCRAT", "NSTPROG2", "GEPANIPI", "GEPURPCO"})
         CmbSubject.Location = New Point(12, 182)
         CmbSubject.Name = "CmbSubject"
         CmbSubject.Size = New Size(300, 36)
@@ -106,7 +109,7 @@ Partial Class Form2
         ' 
         cmbInstructor.Font = New Font("Segoe UI", 12F)
         cmbInstructor.FormattingEnabled = True
-        cmbInstructor.Items.AddRange(New Object() {"Mr. Jovel Advincula", "Mrs. Sheila Marie Matias", "Mr. Al Santiago"})
+        cmbInstructor.Items.AddRange(New Object() {"Mr. Jovel Advincula", "Mrs. Sheila Marie Matias", "Mr. Al Santiago", "Ms. Kathleen Dimaano", "Mrs. Charlene Ronda", " Mr. Louie Cris Rivera", "Mr. Ranilo Pardito", "Mr. Jonathan Torzar"})
         cmbInstructor.Location = New Point(12, 254)
         cmbInstructor.Name = "cmbInstructor"
         cmbInstructor.Size = New Size(300, 36)
@@ -134,7 +137,7 @@ Partial Class Form2
         ' Label5
         ' 
         Label5.AutoSize = True
-        Label5.Location = New Point(12, 302)
+        Label5.Location = New Point(12, 650)
         Label5.Name = "Label5"
         Label5.Size = New Size(70, 20)
         Label5.TabIndex = 8
@@ -218,7 +221,7 @@ Partial Class Form2
         grpInstructorRating.Controls.Add(RadioButton6)
         grpInstructorRating.Controls.Add(RadioButton8)
         grpInstructorRating.Controls.Add(RadioButton7)
-        grpInstructorRating.Location = New Point(318, 237)
+        grpInstructorRating.Location = New Point(318, 254)
         grpInstructorRating.Name = "grpInstructorRating"
         grpInstructorRating.Size = New Size(210, 53)
         grpInstructorRating.TabIndex = 23
@@ -313,7 +316,7 @@ Partial Class Form2
         ' 
         Label9.AutoSize = True
         Label9.Font = New Font("Segoe UI", 7F)
-        Label9.Location = New Point(534, 254)
+        Label9.Location = New Point(534, 268)
         Label9.Name = "Label9"
         Label9.Size = New Size(223, 90)
         Label9.TabIndex = 28
@@ -339,11 +342,32 @@ Partial Class Form2
         PictureBox1.TabIndex = 30
         PictureBox1.TabStop = False
         ' 
+        ' Label6
+        ' 
+        Label6.AutoSize = True
+        Label6.Font = New Font("Segoe UI", 7F)
+        Label6.Location = New Point(534, 159)
+        Label6.Name = "Label6"
+        Label6.Size = New Size(238, 90)
+        Label6.TabIndex = 31
+        Label6.Text = resources.GetString("Label6.Text")
+        ' 
+        ' Label7
+        ' 
+        Label7.AutoSize = True
+        Label7.Location = New Point(12, 302)
+        Label7.Name = "Label7"
+        Label7.Size = New Size(70, 20)
+        Label7.TabIndex = 32
+        Label7.Text = "Semester"
+        ' 
         ' Form2
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(789, 549)
+        ClientSize = New Size(789, 545)
+        Controls.Add(Label7)
+        Controls.Add(Label6)
         Controls.Add(btnBack)
         Controls.Add(Label9)
         Controls.Add(btnSubmit)
@@ -404,4 +428,6 @@ Partial Class Form2
     Friend WithEvents Label9 As Label
     Friend WithEvents btnBack As Button
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label7 As Label
 End Class

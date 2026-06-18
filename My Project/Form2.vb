@@ -7,6 +7,11 @@
     Private Sub txtComments_TextChanged(sender As Object, e As EventArgs) Handles txtComments.TextChanged
         Dim count As Integer = txtComments.Text.Length
         lblCharCount.Text = "Character Counter: " & count & "/2000"
+        If count > 2000 Then
+            lblCharCount.ForeColor = Color.Red
+        Else
+            lblCharCount.ForeColor = Color.Gray
+        End If
     End Sub
 
     Private Function GetSubjectRating() As Integer
@@ -40,19 +45,30 @@
             MessageBox.Show("Please select a semester.")
             Exit Sub
         End If
+
         Dim subjectRating As Integer = GetSubjectRating()
         If subjectRating = 0 Then
             MessageBox.Show("Please rate the subject.")
             Exit Sub
         End If
+
         Dim instructorRating As Integer = GetInstructorRating()
         If instructorRating = 0 Then
             MessageBox.Show("Please rate the instructor.")
             Exit Sub
         End If
+
+        Dim subjectCode As String = CmbSubject.SelectedItem.ToString()
+
+        ' Check if student already submitted for this subject
+        If HasAlreadySubmitted(LoginForm1.LoggedInStudentID, subjectCode) Then
+            MessageBox.Show("You have already submitted feedback for " & subjectCode & ".")
+            Exit Sub
+        End If
+
         Dim success As Boolean = SubmitFeedback(
-            txtUsername.Text.Trim(),
-            CmbSubject.SelectedItem.ToString(),
+            LoginForm1.LoggedInStudentID,
+            subjectCode,
             cmbInstructor.SelectedItem.ToString(),
             cmbSemester.SelectedItem.ToString(),
             subjectRating,
@@ -61,8 +77,9 @@
             "anonymous_hash"
         )
 
-
         If success Then
+            ' Record the submission so student can't submit again
+            RecordSubmission(LoginForm1.LoggedInStudentID, subjectCode)
             MessageBox.Show("Feedback submitted successfully!")
         Else
             MessageBox.Show("Submission failed.")
@@ -70,8 +87,8 @@
     End Sub
 
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
-        Dim splash As New Form1()
-        splash.Show()
+        Dim loginForm As New LoginForm1()
+        loginForm.Show()
         Me.Close()
     End Sub
 

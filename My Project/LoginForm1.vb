@@ -1,12 +1,16 @@
-﻿Public Class Form3
+Public Class LoginForm1
 
-    Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    ' Store logged in student ID to pass to Form2
+    Public Shared LoggedInStudentID As String = ""
+
+    Private Sub LoginForm1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         txtPassword.PasswordChar = "*"
         lblError.Visible = False
     End Sub
 
-    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
-        If CheckBox1.Checked Then
+    ' Show/hide password checkbox
+    Private Sub chkShowPassword_CheckedChanged(sender As Object, e As EventArgs) Handles chkShowPassword.CheckedChanged
+        If chkShowPassword.Checked Then
             txtPassword.PasswordChar = Nothing
         Else
             txtPassword.PasswordChar = "*"
@@ -15,7 +19,7 @@
 
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         If String.IsNullOrEmpty(txtUsername.Text.Trim()) Then
-            lblError.Text = "Please enter your username."
+            lblError.Text = "Please enter your Student ID."
             lblError.ForeColor = Color.Red
             lblError.Visible = True
             Exit Sub
@@ -27,18 +31,19 @@
             Exit Sub
         End If
 
-        Dim success As Boolean = AdminLogin(
+        Dim success As Boolean = StudentLogin(
             txtUsername.Text.Trim(),
             txtPassword.Text
         )
 
         If success Then
+            LoggedInStudentID = txtUsername.Text.Trim()
             lblError.Visible = False
-            Dim dashboard As New Form4()
-            dashboard.Show()
+            Dim feedbackForm As New Form2()
+            feedbackForm.Show()
             Me.Hide()
         Else
-            lblError.Text = "Invalid username or password."
+            lblError.Text = "Invalid Student ID or password."
             lblError.ForeColor = Color.Red
             lblError.Visible = True
             txtPassword.Text = ""
@@ -50,11 +55,16 @@
             btnLogin_Click(sender, e)
         End If
     End Sub
-
-    Private Sub returnFORM2_Click(sender As Object, e As EventArgs) Handles returnFORM2.Click
-        Dim splash As New Form1()
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles returnFORM1.Click
+        Dim splash As New Form1
         splash.Show()
-        Me.Close()
+        Close()
+    End Sub
+
+    Private Sub btnForgotPassword_Click(sender As Object, e As EventArgs) Handles btnForgotPassword.Click
+        Dim changePass As New LoginForm2()
+        changePass.Show()
+        Me.Hide()
     End Sub
 
 End Class

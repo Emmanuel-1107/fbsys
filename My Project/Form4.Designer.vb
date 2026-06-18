@@ -34,6 +34,9 @@ Partial Class Form4
         Label2 = New Label()
         Button1 = New Button()
         Button2 = New Button()
+        SEMESTERname = New Label()
+        Label4 = New Label()
+        Label5 = New Label()
         CType(PictureBox1, ComponentModel.ISupportInitialize).BeginInit()
         CType(dgvFeedbacks, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
@@ -88,7 +91,7 @@ Partial Class Form4
         ' btnRefresh
         ' 
         btnRefresh.Font = New Font("Segoe UI", 10F)
-        btnRefresh.Location = New Point(643, 524)
+        btnRefresh.Location = New Point(865, 593)
         btnRefresh.Name = "btnRefresh"
         btnRefresh.Size = New Size(127, 53)
         btnRefresh.TabIndex = 9
@@ -101,13 +104,13 @@ Partial Class Form4
         dgvFeedbacks.Location = New Point(152, 206)
         dgvFeedbacks.Name = "dgvFeedbacks"
         dgvFeedbacks.RowHeadersWidth = 51
-        dgvFeedbacks.Size = New Size(618, 296)
+        dgvFeedbacks.Size = New Size(840, 381)
         dgvFeedbacks.TabIndex = 10
         ' 
         ' totalResponses
         ' 
         totalResponses.AutoSize = True
-        totalResponses.Location = New Point(152, 525)
+        totalResponses.Location = New Point(206, 599)
         totalResponses.Name = "totalResponses"
         totalResponses.Size = New Size(130, 20)
         totalResponses.TabIndex = 11
@@ -116,7 +119,7 @@ Partial Class Form4
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Location = New Point(152, 557)
+        Label1.Location = New Point(206, 631)
         Label1.Name = "Label1"
         Label1.Size = New Size(163, 20)
         Label1.TabIndex = 12
@@ -125,7 +128,7 @@ Partial Class Form4
         ' Label2
         ' 
         Label2.AutoSize = True
-        Label2.Location = New Point(152, 590)
+        Label2.Location = New Point(206, 664)
         Label2.Name = "Label2"
         Label2.Size = New Size(176, 20)
         Label2.TabIndex = 13
@@ -134,7 +137,7 @@ Partial Class Form4
         ' Button1
         ' 
         Button1.Font = New Font("Segoe UI", 10F)
-        Button1.Location = New Point(352, 528)
+        Button1.Location = New Point(477, 615)
         Button1.Name = "Button1"
         Button1.Size = New Size(127, 50)
         Button1.TabIndex = 14
@@ -151,11 +154,41 @@ Partial Class Form4
         Button2.Text = "LOGOUT"
         Button2.UseVisualStyleBackColor = True
         ' 
+        ' SEMESTERname
+        ' 
+        SEMESTERname.AutoSize = True
+        SEMESTERname.Location = New Point(152, 125)
+        SEMESTERname.Name = "SEMESTERname"
+        SEMESTERname.Size = New Size(79, 20)
+        SEMESTERname.TabIndex = 16
+        SEMESTERname.Text = "SEMESTER"
+        ' 
+        ' Label4
+        ' 
+        Label4.AutoSize = True
+        Label4.Location = New Point(372, 125)
+        Label4.Name = "Label4"
+        Label4.Size = New Size(66, 20)
+        Label4.TabIndex = 18
+        Label4.Text = "SUBJECT"
+        ' 
+        ' Label5
+        ' 
+        Label5.AutoSize = True
+        Label5.Location = New Point(606, 125)
+        Label5.Name = "Label5"
+        Label5.Size = New Size(95, 20)
+        Label5.TabIndex = 19
+        Label5.Text = "INSTRUCTOR"
+        ' 
         ' Form4
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(974, 651)
+        ClientSize = New Size(1029, 772)
+        Controls.Add(Label5)
+        Controls.Add(Label4)
+        Controls.Add(SEMESTERname)
         Controls.Add(Button2)
         Controls.Add(Button1)
         Controls.Add(Label2)
@@ -188,4 +221,7 @@ Partial Class Form4
     Friend WithEvents Label2 As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
+    Friend WithEvents SEMESTERname As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label5 As Label
 End Class

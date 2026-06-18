@@ -1,21 +1,9 @@
 ﻿Public Class Form1
 
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.Text = "Student Feedback System"
-
-        ' Temporary DLL connection test — remove after confirmed working
-        Try
-            Dim total As Integer = GetTotalResponses()
-            MessageBox.Show("C++ connected! Total responses: " & total)
-        Catch ex As Exception
-            MessageBox.Show("DLL Error: " & ex.Message)
-        End Try
-    End Sub
-
     Private Sub btnGiveFeedback_Click(sender As Object, e As EventArgs) Handles btnGiveFeedback.Click
-        Dim feedbackForm As New Form2()
+        Dim feedbackForm As New LoginForm1
         feedbackForm.Show()
-        Me.Hide()
+        Hide()
     End Sub
 
     Private Sub btnAdminLogin_Click(sender As Object, e As EventArgs) Handles btnAdminLogin.Click
@@ -25,6 +13,10 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles btnGiveFeedback.Click
+
+    End Sub
+
+    Private Sub btnGiveFeedback_BackColorChanged(sender As Object, e As EventArgs) Handles btnGiveFeedback.BackColorChanged
 
     End Sub
 End Class

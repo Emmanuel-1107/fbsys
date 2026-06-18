@@ -5,17 +5,16 @@ Module CppBridge
     ' --------------------------------------------------------
     '  FORM 2 — Student Feedback
     ' --------------------------------------------------------
-
     <DllImport("FeedbackSystemTUGN.dll", CallingConvention:=CallingConvention.Cdecl)>
     Public Function SubmitFeedback(
-    username As String,
-    subjectCode As String,
-    instructor As String,
-    semester As String,
-    subjectRating As Integer,
-    instructorRating As Integer,
-    comments As String,
-    ipHash As String) As Boolean
+        username As String,
+        subjectCode As String,
+        instructor As String,
+        semester As String,
+        subjectRating As Integer,
+        instructorRating As Integer,
+        comments As String,
+        ipHash As String) As Boolean
     End Function
 
     <DllImport("FeedbackSystemTUGN.dll", CallingConvention:=CallingConvention.Cdecl)>
@@ -29,7 +28,6 @@ Module CppBridge
     ' --------------------------------------------------------
     '  FORM 3 — Admin Login
     ' --------------------------------------------------------
-
     <DllImport("FeedbackSystemTUGN.dll", CallingConvention:=CallingConvention.Cdecl)>
     Public Function AdminLogin(
         username As String,
@@ -39,7 +37,6 @@ Module CppBridge
     ' --------------------------------------------------------
     '  FORM 4 — Admin Dashboard
     ' --------------------------------------------------------
-
     <DllImport("FeedbackSystemTUGN.dll", CallingConvention:=CallingConvention.Cdecl)>
     Public Function GetAllFeedback() As IntPtr
     End Function
@@ -68,7 +65,34 @@ Module CppBridge
     End Function
 
     ' --------------------------------------------------------
-    '  Helper — converts IntPtr returned from C++ to VB String
+    '  Student functions
+    ' --------------------------------------------------------
+    <DllImport("FeedbackSystemTUGN.dll", CallingConvention:=CallingConvention.Cdecl)>
+    Public Function StudentLogin(
+        studentID As String,
+        password As String) As Boolean
+    End Function
+
+    <DllImport("FeedbackSystemTUGN.dll", CallingConvention:=CallingConvention.Cdecl)>
+    Public Function HasAlreadySubmitted(
+        studentID As String,
+        subjectCode As String) As Boolean
+    End Function
+
+    <DllImport("FeedbackSystemTUGN.dll", CallingConvention:=CallingConvention.Cdecl)>
+    Public Function RecordSubmission(
+        studentID As String,
+        subjectCode As String) As Boolean
+    End Function
+
+    <DllImport("FeedbackSystemTUGN.dll", CallingConvention:=CallingConvention.Cdecl)>
+    Public Function ChangeStudentPassword(
+        studentID As String,
+        newPassword As String) As Boolean
+    End Function
+
+    ' --------------------------------------------------------
+    '  Helper — converts IntPtr from C++ to VB String
     ' --------------------------------------------------------
     Public Function PtrToString(ptr As IntPtr) As String
         Return Marshal.PtrToStringAnsi(ptr)
