@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1743445502 source:c:\users\emman\onedrive\documents\fbsys\cpp_backend\feedbacksystem\main.cpp
+	"main.h"
+
+1743445502 c:\users\emman\onedrive\documents\fbsys\cpp_backend\feedbacksystem\main.h
+	<windows.h>
+
