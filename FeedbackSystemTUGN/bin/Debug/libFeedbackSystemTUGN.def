@@ -1,0 +1,15 @@
+EXPORTS
+    AdminLogin @1
+    ChangeStudentPassword @2
+    ExportCSV @3
+    GetAllFeedback @4
+    GetAverageInstructorRating @5
+    GetAverageSubjectRating @6
+    GetFilteredFeedback @7
+    GetInstructorsBySubject @8
+    GetSubjects @9
+    GetTotalResponses @10
+    HasAlreadySubmitted @11
+    RecordSubmission @12
+    StudentLogin @13
+    SubmitFeedback @14

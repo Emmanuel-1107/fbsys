@@ -1,0 +1,179 @@
+# depslib dependency file v1.0
+1743445502 source:c:\users\emman\onedrive\documents\fbsys\cpp_backend\feedbacksystemtugn\main.cpp
+	"main.h"
+
+1743445502 c:\users\emman\onedrive\documents\fbsys\cpp_backend\feedbacksystemtugn\main.h
+	<windows.h>
+
+1779547855 source:c:\users\emman\onedrive\documents\fbsys\cpp_backend\feedbacksystemtugn\adminuser.cpp
+	"AdminUser.h"
+	<iostream>
+	<sstream>
+	<iomanip>
+	<ctime>
+	<random>
+	<functional>
+
+1779547855 c:\users\emman\onedrive\documents\fbsys\cpp_backend\feedbacksystemtugn\adminuser.h
+	<string>
+
+1779547855 source:c:\users\emman\onedrive\documents\fbsys\cpp_backend\feedbacksystemtugn\analyticsengine.cpp
+	"AnalyticsEngine.h"
+	<fstream>
+	<numeric>
+	<algorithm>
+	<iostream>
+
+1779550867 c:\users\emman\onedrive\documents\fbsys\cpp_backend\feedbacksystemtugn\analyticsengine.h
+	<string>
+	<vector>
+	<map>
+
+1779547855 source:c:\users\emman\onedrive\documents\fbsys\cpp_backend\feedbacksystemtugn\feedback.cpp
+	"Feedback.h"
+	<algorithm>
+	<sstream>
+	<iomanip>
+	<ctime>
+	<regex>
+
+1779547855 c:\users\emman\onedrive\documents\fbsys\cpp_backend\feedbacksystemtugn\feedback.h
+	<string>
+
+1779547855 source:c:\users\emman\onedrive\documents\fbsys\cpp_backend\feedbacksystemtugn\studentfeedback.cpp
+	"StudentFeedback.h"
+	<iostream>
+	<regex>
+
+1779547855 c:\users\emman\onedrive\documents\fbsys\cpp_backend\feedbacksystemtugn\studentfeedback.h
+	"Feedback.h"
+
+1779551626 source:c:\users\emman\onedrive\documents\fbsys\cpp_backend\feedbacksystemtugn\feedbackbridge.cpp
+	<cstring>
+	"StudentFeedback.h"
+	"AdminUser.h"
+	"AnalyticsEngine.h"
+	"DatabaseManager.h"
+	<string>
+	<sstream>
+
+1779547855 c:\users\emman\onedrive\documents\fbsys\cpp_backend\feedbacksystemtugn\databasemanager.h
+	"StudentFeedback.h"
+	"AnalyticsEngine.h"
+	<string>
+	<vector>
+
+1779551881 source:c:\users\emman\onedrive\documents\fbsys\cpp_backend\feedbacksystemtugn\databasemanager.cpp
+	"DatabaseManager.h"
+	"StudentFeedback.h"
+	"AnalyticsEngine.h"
+	<mysql.h>
+	<iostream>
+	<sstream>
+	<vector>
+	<string>
+
+1775546836 c:\program files\mysql\mysql server 8.0\include\mysql.h
+	<stdbool.h>
+	<stddef.h>
+	<stdint.h>
+	<sys/types.h>
+	<windows.h>
+	<winsock2.h>
+	"field_types.h"
+	"my_list.h"
+	"mysql_com.h"
+	"mysql/client_plugin.h"
+	"mysql_version.h"
+	"mysql_time.h"
+	"errmsg.h"
+
+1775546836 c:\program files\mysql\mysql server 8.0\include\field_types.h
+
+1775546836 c:\program files\mysql\mysql server 8.0\include\my_list.h
+
+1775546836 c:\program files\mysql\mysql server 8.0\include\mysql_com.h
+	<stdbool.h>
+	<stdint.h>
+	"my_command.h"
+	"my_compress.h"
+	"my_io.h"
+	"mysql/components/services/bits/my_io_bits.h"
+	<stdbool.h>
+	"mysql/udf_registration_types.h"
+
+1775546836 c:\program files\mysql\mysql server 8.0\include\my_command.h
+
+1775546836 c:\program files\mysql\mysql server 8.0\include\my_compress.h
+
+1775546836 c:\program files\mysql\mysql server 8.0\include\mysql\udf_registration_types.h
+	<stdbool.h>
+
+1775546836 c:\program files\mysql\mysql server 8.0\include\mysql\client_plugin.h
+	<stdarg.h>
+	<stdlib.h>
+	"plugin_auth_common.h"
+
+1775546836 c:\program files\mysql\mysql server 8.0\include\mysql\plugin_auth_common.h
+	<windows.h>
+
+1775560276 c:\program files\mysql\mysql server 8.0\include\mysql_version.h
+
+1775546836 c:\program files\mysql\mysql server 8.0\include\mysql_time.h
+
+1775546836 c:\program files\mysql\mysql server 8.0\include\errmsg.h
+
+1779547855 source:c:\users\emman\onedrive\documents\fbsys\feedbacksystemtugn\adminuser.cpp
+	"AdminUser.h"
+	<iostream>
+	<sstream>
+	<iomanip>
+	<ctime>
+	<random>
+	<functional>
+
+1779547855 c:\users\emman\onedrive\documents\fbsys\feedbacksystemtugn\adminuser.h
+	<string>
+
+1779547855 source:c:\users\emman\onedrive\documents\fbsys\feedbacksystemtugn\analyticsengine.cpp
+	"AnalyticsEngine.h"
+	<fstream>
+	<numeric>
+	<algorithm>
+	<iostream>
+
+1779550867 c:\users\emman\onedrive\documents\fbsys\feedbacksystemtugn\analyticsengine.h
+	<string>
+	<vector>
+	<map>
+
+1779547855 source:c:\users\emman\onedrive\documents\fbsys\feedbacksystemtugn\feedback.cpp
+	"Feedback.h"
+	<algorithm>
+	<sstream>
+	<iomanip>
+	<ctime>
+	<regex>
+
+1779547855 c:\users\emman\onedrive\documents\fbsys\feedbacksystemtugn\feedback.h
+	<string>
+
+1779678200 source:c:\users\emman\onedrive\documents\fbsys\feedbacksystemtugn\feedbackbridge.cpp
+	<cstring>
+	<cstdio>
+	<string>
+	<sstream>
+	"StudentFeedback.h"
+	"AdminUser.h"
+	"AnalyticsEngine.h"
+	"DatabaseManager.h"
+
+1779547855 c:\users\emman\onedrive\documents\fbsys\feedbacksystemtugn\studentfeedback.h
+	"Feedback.h"
+
+1779547855 c:\users\emman\onedrive\documents\fbsys\feedbacksystemtugn\databasemanager.h
+	"StudentFeedback.h"
+	"AnalyticsEngine.h"
+	<string>
+	<vector>
+
